@@ -1,5 +1,6 @@
 import { IPaciente } from "../../domain/interface/IPaciente"
 import { IPacienteRepository } from "../../domain/interface/IPacienteRepository."
+import { IDatabseStrategy } from "../../infra/database/databaseStrategy"
 
 class PacientesRepositoryInMemory implements IPacienteRepository {
 
@@ -22,6 +23,7 @@ class PacientesRepositoryInMemory implements IPacienteRepository {
    }
 
    listarTodos = async () : Promise<IPaciente[]> => {
+
       return this.pacientes
    } 
 
