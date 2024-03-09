@@ -3,10 +3,14 @@ import { Request, Response } from "express"
 import {ConsultarPacientesUseCase} from "../aplication/use_cases/pacientes/consultarPacientes"
 import PacientesRepositoryInMemory from "../test/repositoriesInMemory/pacientesRepositoryInMemory"
 import { CadastrarPacienteUseCase } from "../aplication/use_cases/pacientes/cadastrarPaciente.UseCase"
+import { PacienteRepository } from "../infra/repositories/pacienteRepository"
 
 const pacientesRepositoryInMemory = new PacientesRepositoryInMemory()
-const consultarPacientesUseCase = new ConsultarPacientesUseCase(pacientesRepositoryInMemory)
-const cadastrarPacienteUseCase = new  CadastrarPacienteUseCase(pacientesRepositoryInMemory)
+
+const pacienteRepository = new PacienteRepository()
+
+const consultarPacientesUseCase = new ConsultarPacientesUseCase(pacienteRepository)
+const cadastrarPacienteUseCase = new  CadastrarPacienteUseCase(pacienteRepository)
 
 const PacientesController = {
       listar : async ( req : Request, res: Response) => {
