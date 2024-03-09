@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:ts": "tsc && node dist/server.js",
+    "build": "tsc --build",
     "dev": "tsc -w & nodemon dist/",
     "dev:local": "tsc src/server.ts",
     "start": "node src/server.js",

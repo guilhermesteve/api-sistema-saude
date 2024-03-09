@@ -8,8 +8,9 @@ export class MongoStrategy implements IDatabseStrategy {
     }
 
     async connect(): Promise<void> {
-        console.log("Mongodb Conectado ....")
+        console.log("Mongodb conectando ....")
         await mongoose.connect(this.uri)
+        console.log("Mongodb Conectado!")
 
     }
 
