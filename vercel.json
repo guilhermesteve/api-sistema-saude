@@ -9,7 +9,7 @@
   "routes": [
         {
             "src": "/(.*)",
-            "dest": "dist/routes"
+            "dest": "dist/server.js"
         }
     ]
 }
