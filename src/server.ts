@@ -13,7 +13,7 @@ const port : number = 80
 
 app.use("/api/v1", routes)
 
-const mongoURI = process.env.mongoURI + ""
+const mongoURI = process.env.MONGODB_URI + ""
 
 const mongoStrategy = new MongoStrategy(mongoURI)
 
