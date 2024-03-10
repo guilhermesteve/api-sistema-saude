@@ -27,3 +27,4 @@ app.listen(port, () => __awaiter(void 0, void 0, void 0, function* () {
     console.log(`Example app listening on port ${port}`);
     yield mongoStrategy.connect();
 }));
+module.exports = app;
