@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:ts": "tsc && node dist/server.js",
-    "build": "rimraf dist && tsc --output public",
+    "build": "rimraf dist && tsc",
     "ts.check": "tsc --project tsconfig.json",
     "add-build": "git add dist",
     "dev": "tsc -w & nodemon dist/server.js",
