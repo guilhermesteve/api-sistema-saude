@@ -21,7 +21,7 @@ const dotenv_1 = require("dotenv");
 app.use(express_1.default.json());
 const port = 80;
 app.use("/api/v1", routes_1.default);
-const mongoURI = process.env.mongoURI + "";
+const mongoURI = process.env.MONGODB_URI + "";
 const mongoStrategy = new mongoStrategy_1.MongoStrategy(mongoURI);
 app.listen(port, () => __awaiter(void 0, void 0, void 0, function* () {
     console.log(`Example app listening on port ${port}`);
