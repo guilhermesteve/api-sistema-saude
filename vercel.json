@@ -7,5 +7,10 @@
         }
     ],  
   
-  "rewrites": [{ "source": "/(.*)", "destination": "/dist/server.js" }] 
+  "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "dist/routes"
+        }
+    ]
 }
